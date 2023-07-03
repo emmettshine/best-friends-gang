@@ -6,6 +6,19 @@
   height: var(--doc-height);
  }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+footer::-webkit-scrollbar {
+  display: none;
+}
+
 @font-face {
   font-family: College;
   src: url(./college.woff2);
@@ -17,6 +30,7 @@ html, body, p, ul, ol, a, li, div, span, h1, h2, h3, h4, h5 {
   font-family: College;
   font-size: 24px;
   color: #000;
+
 }
 
 a {
@@ -37,12 +51,16 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 150px);
+  height: calc(var(--doc-height) - 132px);
 }
 
 main, footer {
   opacity: 0;
   transition: .3s ease-out;
+}
+
+footer {
+  padding-bottom: 32px;
 }
 
 #main-logo {
@@ -78,6 +96,10 @@ ul {
   a {
     font-size: 20px;
   }
+  main {
+    height: calc(var(--doc-height) - 119px);
+  }
+
 }
 
 @media (max-width: 620px) {
@@ -86,11 +108,14 @@ ul {
   a {
     font-size: 16px;
   }
+  main {
+    height: calc(var(--doc-height) - 106px);
+  }
 }
 
 @media (max-width: 400px) {
   main {
-    height: calc(100vh - 100px);
+    height: calc(var(--doc-height) - 100px);
   }
   #main-logo {
     max-width: 90%;
