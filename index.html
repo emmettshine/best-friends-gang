@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Friends Gang</title>
+
+  <meta name="description" content="Best Friends Gang is a lifestyle clothing brand born out of LOLA New York, founded by Emmett Shine, James Cruickshank, and Alex Young. With chapters in New York, Los Angeles, The Hamptons, Miami, London, and Paris.">
+  <meta property="og:image" content="./best-friends-gang-logo.png">
+  <meta property="og:title" content="⛓️ Best Friends Gang ⛓️">
+  <meta property="og:url" content="https://www.natalieandemmett.com">
+  <meta property="og:description" content="Best Friends Gang is a lifestyle clothing brand born out of LOLA New York, founded by Emmett Shine, James Cruickshank, and Alex Young. With chapters in New York, Los Angeles, The Hamptons, Miami, London, and Paris.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="bestfriendsgang.co">
+  <meta property="twitter:url" content="https://www.bestfriendsgang.co">
+  <meta name="twitter:title" content="⛓️ Best Friends Gang ⛓️">
+  <meta name="twitter:description" content="Best Friends Gang is a lifestyle clothing brand born out of LOLA New York, founded by Emmett Shine, James Cruickshank, and Alex Young. With chapters in New York, Los Angeles, The Hamptons, Miami, London, and Paris.">
+  <meta name="twitter:image" content="./best-friends-gang-logo.png">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+
+  </header>
+
+
+  <main>
+    <img id="main-logo" src="./best-friends-gang-logo.png" alt="Best Friends Gang logo">
+  </main>
+
+
+  <footer>
+    <p class="contact">
+      inquiries:
+      <br>
+      <a href="mailto:hello@bestfriendsgang.co">hello@bestfriendsgang.co</a>
+    </p>
+    <ul>
+      <li>New York</li>
+      <li>Los Angeles</li>
+      <li>Hamptons</li>
+      <li>Miami</li>
+      <li>Paris</li>
+      <li>London</li>
+    </ul>
+  </footer>
+
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('main').style.opacity = 1
+      document.querySelector('footer').style.opacity = 1
+    });
+
+
+    const documentHeight = () => {
+      const doc = document.documentElement;
+      doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+    };
+
+    documentHeight();
+
+
+    var hasTouchScreen = false;
+
+    if ("maxTouchPoints" in navigator) {
+        hasTouchScreen = navigator.maxTouchPoints > 0;
+    } else if ("msMaxTouchPoints" in navigator) {
+        hasTouchScreen = navigator.msMaxTouchPoints > 0;
+    } else {
+        var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+        if (mQ && mQ.media === "(pointer:coarse)") {
+            hasTouchScreen = !!mQ.matches;
+        } else if ('orientation' in window) {
+            hasTouchScreen = true; // deprecated, but good fallback
+        } else {
+            // Only as a last resort, fall back to user agent sniffing
+            var UA = navigator.userAgent;
+            hasTouchScreen = (
+                /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+                /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+            );
+        }
+    }
+
+    if (!hasTouchScreen) {
+      // resize document height on "non-mobile" (i.e. non-touchscreen) devices
+      window.addEventListener('resize', documentHeight);
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+ :root {
+  --doc-height: 100%;
+ }
+
+ html, body {
+  height: var(--doc-height);
+ }
+
+@font-face {
+  font-family: College;
+  src: url(./college.woff2);
+}
+
+html, body, p, ul, ol, a, li, div, span, h1, h2, h3, h4, h5 {
+  padding: 0;
+  margin: 0;
+  font-family: College;
+  font-size: 24px;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s ease-out;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: darkgray;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 150px);
+}
+
+main, footer {
+  opacity: 0;
+  transition: .3s ease-out;
+}
+
+#main-logo {
+  max-width: 556px;
+  max-height: 90%;
+  /*margin-top: 104px;*/
+  /*margin-bottom: 81px;*/
+}
+
+.contact {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  max-width: 710px;
+  margin: auto;
+}
+
+@media (max-width: 865px) {
+  #main-logo {
+    max-width: 80%
+  }
+  ul {
+    max-width: 90%;
+  }
+
+  .contact,
+  li,
+  a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .contact,
+  li,
+  a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    height: calc(100vh - 100px);
+  }
+  #main-logo {
+    max-width: 90%;
+  }
+
+  .contact,
+  li,
+  a {
+    font-size: 14px;
+  }
+}
+
+
